@@ -1,0 +1,42 @@
+#root{
+    --primary: #0061f2;
+    --secondary:rgba(105, 0, 199, 0.8)
+}
+
+.p-section{
+    padding: 0 3rem ;
+}
+
+/* ================ */
+#dashboard-intro{
+    padding-bottom: 8rem;
+    background: linear-gradient(128deg, var(--primary), var(--secondary));
+}
+
+
+@media (max-width:767px){
+    .mobile-none{
+        display: none;
+    }
+}
+@media (min-width:768px){
+    .desktop-none{
+        display: none;
+    }
+}
+
+
+.openComp {
+    animation: openComp 0.3s ease forwards;
+}
+@keyframes openComp{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* @media (max-width: 767px) {
+
+} */
