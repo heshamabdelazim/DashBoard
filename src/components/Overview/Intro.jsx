@@ -1,5 +1,4 @@
 import { ActivityIcon, Calendar1Icon } from "lucide-react";
-import React from "react";
 
 function Intro() {
   const flexCenter = "flex items-center";

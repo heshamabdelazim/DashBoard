@@ -90,7 +90,7 @@ function Nav({ isAuthenticated, iconConfig, handleSidebarToggle }) {
         </ul>
         <button>
           {isAuthenticated ? (
-            <img src="/public/profile-1.png" className="w-8 h-8 rounded-full" />
+            <img src="/profile-1.png" className="w-8 h-8 rounded-full" />
           ) : (
             "Login"
           )}

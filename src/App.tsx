@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css'
-import Nav from "./components/Nav/Nav.jsx";
-import Aside from "./components/Aside/Aside.jsx";
-import Intro from "./components/Intro/Intro.jsx";
-import ThreeCards from "./components/Intro/ThreeCards.jsx";
+import Nav from "./Components/Nav/Nav.jsx";
+import Aside from "./Components/Aside/Aside.jsx";
+import Intro from "./Components/Overview/Intro.jsx";
+import ThreeCards from "./Components/Overview/ThreeCards/ThreeCards.jsx";
+import Widgets from "./Components/Overview/Widgets/Widgets.jsx";
+import Statistics from "./Components/Overview/Statistics/Statistics.jsx";
+import Table from "./Components/Overview/Table.jsx"
 
 function App() {
-
   let [openSidebar, setOpenSidebar] = useState(true);
   const handleSidebarToggle = useCallback(() => {
     setOpenSidebar(old => !old);
@@ -22,8 +24,9 @@ function App() {
     iconSize:18,
     strokeWidth: 1.25
   }
+  
   return (
-    <div id="app" className="w-[100vw]">
+    <div id="app" className="">
       <div id='navigator'>
         <Nav isAuthenticated={isAuthenticated} iconConfig={iconConfig} handleSidebarToggle={handleSidebarToggle} />
         <main className='flex-1 min-h-[80vh] flex mt-[4rem]'>
@@ -31,17 +34,9 @@ function App() {
           <div id='content' className='bg-[#e4e8ee] flex-1'>
             <Intro />
             <ThreeCards />
-            <div id='widgets-comps'>
-              <div className="one">one</div>
-              <div className="one">one</div>
-              <div className="one">one</div>
-              <div className="one">one</div>
-            </div>
-            <div id='statistics'>
-              <div>one</div>
-              <div>one</div>
-            </div>
-            <h1>one</h1>
+            <Widgets/>
+            <Statistics />
+             <Table/>
           </div>
         </main>
       </div>
@@ -51,26 +46,3 @@ function App() {
 
 export default App
 
-/**
-          <div id='content' className='bg-white flex-1 p-3.5 h-[200vh]'>
-            <div>
-              <h2> icon   DashBoard</h2>
-            </div>
-            <div id="intro-comps" className='flex flex-wrap gap-4 justify-between'>
-              <div className="comp">one</div>
-              <div className="comp">one</div>
-              <div className="comp">one</div>
-            </div>
-            <div id='widgets-comps'>
-              <div className="one">one</div>
-              <div className="one">one</div>
-              <div className="one">one</div>
-              <div className="one">one</div>
-            </div>
-            <div id='statistics'>
-              <div>one</div>
-              <div>one</div>
-            </div>
-            <h1>one</h1>
-          </div> 
- */
